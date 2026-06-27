@@ -7,6 +7,17 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
+    zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+    };
+
+    zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
+        compatible = "zmk,input-processor-code-mapper";
+        #input-processor-cells = <0>;
+        map = <0 8>, <1 6>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -18,11 +29,21 @@
     };
 
     pointing_listener: pointing_listener {
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_temp_layer 1 1500>, <&zip_xy_to_scroll_mapper 2>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_temp_layer 1 1500>;
+
+        scroll {
+            layers = <2>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
 
     pointing_device_split_listener: pointing_device_split_listener {
-        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_temp_layer 1 1500>, <&zip_xy_to_scroll_mapper 2>;
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>, <&zip_temp_layer 1 1500>;
+
+        scroll {
+            layers = <2>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
 
     keymap {
