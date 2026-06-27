@@ -54,6 +54,12 @@
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
+            layers = <6>;
+        };
+
+        setting_mode {
+            bindings = <&mo 6>;
+            key-positions = <64 65 63>;
         };
     };
 
@@ -139,6 +145,16 @@
 &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp INS          &kp HOME        &kp PAGE_UP      &trans
 &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DELETE       &kp END         &kp PAGE_DOWN    &trans
 &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans          &trans           &trans
+            >;
+        };
+
+        setting {
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
