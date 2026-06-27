@@ -55,7 +55,7 @@
         bt_clear {
             bindings = <&bt BT_CLR>;
             key-positions = <28 29>;
-            layers = <5>;
+            layers = <6>;
         };
     };
 
@@ -86,11 +86,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC    &kp N1        &kp N2    &kp N3  &kp N4            &kp N5                                  &kp N6            &kp N7  &kp N8     &kp N9    &kp N0       &kp JA_MINS
-&kp TAB    &kp Q         &kp W     &kp E   &kp R             &kp T                                   &kp Y             &kp U   &kp I      &kp O     &kp P        &kp JA_AT
-&trans     &kp A         &kp S     &kp D   &kp F             &kp G          &kp JA_YEN  &kp JA_LBKT  &kp H             &kp J   &kp K      &kp L     &kp JA_SCLN  &kp JA_COLN
-&kp LSHFT  &kp Z         &kp X     &kp C   &kp V             &kp B          &kp JA_HAT  &kp JA_RBKT  &kp N             &kp M   &kp COMMA  &kp DOT   &kp SLASH    &kp JA_BSLASH
-&kp LCTRL  &kp LEFT_WIN  &kp LALT  &trans  &kp INT_MUHENKAN  &kp BACKSPACE  &kp ENTER   &kp SPACE    &lt 3 INT_HENKAN  &trans  &trans     &kp RGUI  &trans       &kp RCTRL
+&kp ESC      &kp N1        &kp N2    &kp N3  &kp N4            &kp N5                                  &kp N6            &kp N7  &kp N8     &kp N9    &kp N0           &kp JA_MINS
+&kp TAB      &kp Q         &kp W     &kp E   &kp R             &kp T                                   &kp Y             &kp U   &kp I      &kp O     &kp P            &kp JA_AT
+&lt 5 LCTRL  &kp A         &kp S     &kp D   &kp F             &kp G          &kp JA_YEN  &kp JA_LBKT  &kp H             &kp J   &kp K      &kp L     &kp JA_SCLN      &kp JA_COLN
+&kp LSHFT    &kp Z         &kp X     &kp C   &kp V             &kp B          &kp JA_HAT  &kp JA_RBKT  &kp N             &kp M   &kp COMMA  &kp DOT   &kp SLASH        &kp JA_BSLASH
+&kp LCTRL    &kp LEFT_WIN  &kp LALT  &trans  &kp INT_MUHENKAN  &kp BACKSPACE  &kp ENTER   &kp SPACE    &lt 3 INT_HENKAN  &trans  &trans     &kp RGUI  &lt 5 RIGHT_GUI  &kp RCTRL
             >;
         };
 
@@ -131,6 +131,16 @@
 &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans         &kp PAGE_UP  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans         &trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        func {
+            bindings = <
+&kp LANG_ZENKAKUHANKAKU  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8           &kp F9          &kp F10          &kp F11
+&trans                   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp F12
+&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp INS          &kp HOME        &kp PAGE_UP      &trans
+&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DELETE       &kp END         &kp PAGE_DOWN    &trans
+&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans          &trans           &trans
             >;
         };
 
