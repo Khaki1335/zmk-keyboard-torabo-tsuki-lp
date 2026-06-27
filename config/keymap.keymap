@@ -7,6 +7,16 @@
 #include <dt-bindings/zmk/input_transform.h>
 
 / {
+    behaviors {
+        scroll_middle: scroll_middle {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&mkp>;
+        };
+    };
+
     zip_temp_layer: zip_temp_layer {
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
@@ -61,11 +71,11 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mo 2      &trans     &trans                  &trans  &trans     &mo 2      &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans                 &trans     &trans                  &trans  &trans     &trans                 &trans  &trans  &trans
+&trans  &trans  &trans  &scroll_middle 2 MCLK  &trans     &trans                  &trans  &trans     &scroll_middle 2 MCLK  &trans  &trans  &trans
+&trans  &trans  &trans  &mkp RCLK              &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK              &trans  &trans  &trans
+&trans  &trans  &trans  &trans                 &trans     &trans  &trans  &trans  &trans  &trans     &trans                 &trans  &trans  &trans
+&trans  &trans  &trans  &trans                 &trans     &trans  &trans  &trans  &trans  &trans     &trans                 &trans  &trans  &trans
             >;
         };
 
