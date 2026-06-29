@@ -41,7 +41,6 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         require-prior-idle-ms = <100>;
-        track-key-presses;
     };
 
     zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
@@ -85,6 +84,18 @@
             layers = <2>;
             input-processors = <&zip_xy_to_scroll_mapper>;
         };
+    };
+
+    &mkp_input_listener {
+        input-processors = <&zip_temp_layer 1 500>;
+    };
+
+    &mmv_input_listener {
+        input-processors = <&zip_temp_layer 1 500>;
+    };
+
+    &msc_input_listener {
+        input-processors = <&zip_temp_layer 1 500>;
     };
 
     keymap {
