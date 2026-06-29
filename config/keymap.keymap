@@ -86,18 +86,6 @@
         };
     };
 
-    &mkp_input_listener {
-        input-processors = <&zip_temp_layer 1 500>;
-    };
-
-    &mmv_input_listener {
-        input-processors = <&zip_temp_layer 1 500>;
-    };
-
-    &msc_input_listener {
-        input-processors = <&zip_temp_layer 1 500>;
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -171,4 +159,16 @@
             >;
         };
     };
+};
+
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 1 500>;
+};
+
+&mmv_input_listener {
+    input-processors = <&zip_temp_layer 1 500>;
+};
+
+&msc_input_listener {
+    input-processors = <&zip_temp_layer 1 500>;
 };
