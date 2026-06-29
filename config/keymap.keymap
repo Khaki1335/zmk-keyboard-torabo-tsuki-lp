@@ -41,6 +41,7 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         require-prior-idle-ms = <100>;
+        track-key-presses;
     };
 
     zip_xy_to_scroll_mapper: zip_xy_to_scroll_mapper {
