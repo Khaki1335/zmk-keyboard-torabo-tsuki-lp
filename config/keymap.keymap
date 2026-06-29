@@ -49,6 +49,12 @@
         map = <0 8>, <1 6>;
     };
 
+    zip_scroll_scaler: zip_scroll_scaler {
+        compatible = "zmk,input-processor-scaler";
+        #input-processor-cells = <2>;
+        codes = <6 8>;
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -71,7 +77,11 @@
 
         scroll {
             layers = <2>;
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors =
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_temp_layer 1 500>,
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_scaler 1 4>;
         };
     };
 
@@ -82,7 +92,11 @@
 
         scroll {
             layers = <2>;
-            input-processors = <&zip_xy_to_scroll_mapper>;
+            input-processors =
+                <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+                <&zip_temp_layer 1 500>,
+                <&zip_xy_to_scroll_mapper>,
+                <&zip_scroll_scaler 1 4>;
         };
     };
 
