@@ -101,21 +101,21 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans                 &trans     &trans                            &trans            &trans     &trans                 &trans  &trans  &trans
-&trans  &trans  &trans  &scroll_middle 2 MCLK  &trans     &kp C_AC_FORWARD                  &kp C_AC_FORWARD  &trans     &scroll_middle 2 MCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK              &mkp LCLK  &kp C_AC_BACK     &trans  &trans  &kp C_AC_BACK     &mkp LCLK  &mkp RCLK              &trans  &trans  &trans
-&trans  &trans  &trans  &trans                 &trans     &trans            &trans  &trans  &trans            &trans     &trans                 &trans  &trans  &trans
-&trans  &trans  &trans  &trans                 &trans     &trans            &trans  &trans  &trans            &trans     &trans                 &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans                 &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &msc SCRL_LEFT  &msc SCRL_UP           &msc SCRL_RIGHT   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK       &msc SCRL_DOWN         &mkp RCLK         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_AC_BACK   &scroll_middle 2 MCLK  &kp C_AC_FORWARD  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans                 &trans            &trans  &trans
             >;
         };
 
         scroll {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans          &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK       &msc SCRL_DOWN  &mkp RCLK         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_AC_BACK   &trans          &kp C_AC_FORWARD  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans            &trans  &trans
             >;
         };
 
@@ -142,10 +142,10 @@
         func {
             bindings = <
 &kp JA_ZKHK  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8           &kp F9          &kp F10          &kp F11
-&trans                   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp F12
-&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp INS          &kp HOME        &kp PAGE_UP      &trans
-&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DELETE       &kp END         &kp PAGE_DOWN    &trans
-&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans          &trans           &trans
+&trans       &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp F12
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp INS          &kp HOME        &kp PAGE_UP      &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DELETE       &kp END         &kp PAGE_DOWN    &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans           &trans          &trans           &trans
             >;
         };
 
@@ -161,14 +161,8 @@
     };
 };
 
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 1 500>;
-};
+&mkp_input_listener { input-processors = <&zip_temp_layer 1 500>; };
 
-&mmv_input_listener {
-    input-processors = <&zip_temp_layer 1 500>;
-};
+&mmv_input_listener { input-processors = <&zip_temp_layer 1 500>; };
 
-&msc_input_listener {
-    input-processors = <&zip_temp_layer 1 500>;
-};
+&msc_input_listener { input-processors = <&zip_temp_layer 1 500>; };
