@@ -24,6 +24,7 @@
 #define JA_PIPE   LS(INT3)   // |
 #define JA_BSLASH INT1       // \
 #define JA_UNDS   LS(INT1)   // _
+#define JA_ZKHK   GRAVE      // 半角/全角
 
 / {
     behaviors {
@@ -140,7 +141,7 @@
 
         func {
             bindings = <
-&kp LANG_ZENKAKUHANKAKU  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8           &kp F9          &kp F10          &kp F11
+&kp JA_ZKHK  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                  &kp F6  &kp F7  &kp F8           &kp F9          &kp F10          &kp F11
 &trans                   &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &kp PRINTSCREEN  &kp SCROLLLOCK  &kp PAUSE_BREAK  &kp F12
 &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp INS          &kp HOME        &kp PAGE_UP      &trans
 &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DELETE       &kp END         &kp PAGE_DOWN    &trans
