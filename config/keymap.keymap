@@ -115,21 +115,21 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans                 &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &msc SCRL_LEFT  &msc SCRL_UP           &msc SCRL_RIGHT   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK       &msc SCRL_DOWN         &mkp RCLK         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_AC_BACK   &scroll_middle 2 MCLK  &kp C_AC_FORWARD  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans                 &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans         &trans                 &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans         &trans                 &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK      &scroll_middle 2 MCLK  &mkp RCLK         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_AC_BACK  &trans                 &kp C_AC_FORWARD  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans                 &trans            &trans  &trans
             >;
         };
 
         scroll {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans          &trans          &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_RIGHT   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK       &msc SCRL_DOWN  &mkp RCLK         &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_AC_BACK   &trans          &kp C_AC_FORWARD  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans          &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans         &trans  &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans         &trans  &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK      &trans  &mkp RCLK         &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp C_AC_BACK  &trans  &kp C_AC_FORWARD  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans            &trans  &trans
             >;
         };
 
